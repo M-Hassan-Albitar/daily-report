@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 function Table() {
   let reportData = JSON.parse(localStorage.getItem("reportList")) || [];
-  const [report] = useState(reportData);
+  const [reportLocaly, setReportLocaly] = useState(reportData);
 
-  const tableData = report.map((dt) => {
+  const tableData = reportLocaly.map((dt) => {
     return (
       <tr key={dt.id}>
         <td>{dt.date}</td>
@@ -41,7 +41,11 @@ function Table() {
               className="btn bg-danger m-4"
               onClick={() => {
                 if (confirm("هل انت متأكد ؟")) {
-                  localStorage.setItem("reportList", JSON.stringify([]));
+                  setReportLocaly({});
+                  localStorage.setItem(
+                    "reportList",
+                    JSON.stringify(reportLocaly)
+                  );
                   // window.location.reload();
                 }
               }}
