@@ -41,11 +41,8 @@ function Table() {
               className="btn bg-danger m-4"
               onClick={() => {
                 if (confirm("هل انت متأكد ؟")) {
-                  setReportLocaly({});
-                  localStorage.setItem(
-                    "reportList",
-                    JSON.stringify(reportLocaly)
-                  );
+                  setReportLocaly([{}]);
+                  localStorage.setItem("reportList", JSON.stringify([{}]));
                   // window.location.reload();
                 }
               }}
