@@ -8,9 +8,9 @@ function Table() {
   const tableData = report.map((dt) => {
     return (
       <tr key={dt.id}>
-        <td> {dt.val} </td>
-        <td> {dt.customerNum} </td>
         <td>{dt.date}</td>
+        <td> {dt.customerNum} </td>
+        <td> {dt.val} </td>
       </tr>
     );
   });
@@ -55,9 +55,9 @@ function Table() {
             <table className="table table-bordered text-center">
               <thead>
                 <tr>
-                  <th scope="col">الملاحظة</th>
-                  <th scope="col">عدد الاشخاص</th>
                   <th scope="col">التاريخ</th>
+                  <th scope="col">عدد الاشخاص</th>
+                  <th scope="col">الملاحظة</th>
                 </tr>
               </thead>
               <tbody>{tableData}</tbody>
