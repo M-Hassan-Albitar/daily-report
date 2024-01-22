@@ -29,12 +29,9 @@ function ReportForm() {
     e.preventDefault();
     // TODO HERE
     const item = [...saveList, report];
-
     setSaveList(item);
     setLocalStorage(item);
-
-    setReport({ customerNum: "" });
-    // window.location.reload();
+    window.location.reload();
     // alert("OK");
   };
 
