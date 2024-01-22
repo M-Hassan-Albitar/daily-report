@@ -30,10 +30,18 @@ function ReportForm() {
     e.preventDefault();
     // TODO HERE
     const item = [...saveList, report];
+    const clear = {
+      id: "",
+      date: "",
+      customerNum: "",
+      rate: "",
+      val: "",
+    };
     setSaveList(item);
     setLocalStorage(item);
+    setReport(clear);
     // alert("OK");
-    window.location.reload();
+    // window.location.reload();
   };
 
   return (
