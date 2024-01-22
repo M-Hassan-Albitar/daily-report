@@ -32,7 +32,7 @@ function ReportForm() {
     const item = [...saveList, report];
     setSaveList(item);
     setLocalStorage(item);
-    alert("OK");
+    // alert("OK");
     window.location.reload();
   };
 
