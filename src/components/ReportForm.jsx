@@ -88,7 +88,7 @@ function ReportForm() {
                 name="rate"
                 id="good"
               />
-              <label htmlFor="neg">سلبي : </label>
+              <label htmlFor="bad">سلبي : </label>
               <input
                 value={report.rate}
                 onChange={(e) => {
