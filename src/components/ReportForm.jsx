@@ -4,13 +4,12 @@ import { positive, negative } from "./data";
 import Footer from "./Footer";
 import FormNav from "./FormNav";
 
-const getLocalStorage = JSON.parse(localStorage.getItem("reportList")) || [];
-
 const setLocalStorage = (item) => {
   localStorage.setItem("reportList", JSON.stringify(item));
 };
 
 function ReportForm() {
+  const getLocalStorage = JSON.parse(localStorage.getItem("reportList")) || [];
   const [valList, setValList] = useState([]);
   const [saveList, setSaveList] = useState(getLocalStorage);
   const [report, setReport] = useState({
@@ -33,7 +32,9 @@ function ReportForm() {
 
     setSaveList(item);
     setLocalStorage(item);
-    window.location.reload();
+
+    setReport({ customerNum: "" });
+    // window.location.reload();
     // alert("OK");
   };
 

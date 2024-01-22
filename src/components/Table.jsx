@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 function Table() {
   let reportData = JSON.parse(localStorage.getItem("reportList")) || [];
-  const [reportLocaly, setReportLocaly] = useState(reportData);
+  const [reportLocal] = useState(reportData);
 
-  const tableData = reportLocaly.map((dt) => {
+  const tableData = reportLocal.map((dt) => {
     return (
       <tr key={dt.id}>
         <td>{dt.date}</td>
@@ -23,13 +23,13 @@ function Table() {
             <Link
               to="/"
               style={{ color: "white" }}
-              className="btn bg-success m-4"
+              className="btn bg-success m-2"
             >
               الصفحة الرئيسية <i className="fa-solid fa-house"></i>
             </Link>
             <button
               style={{ color: "white" }}
-              className="btn bg-info  m-4"
+              className="btn bg-info  m-2"
               onClick={() => {
                 window.print();
               }}
@@ -38,11 +38,11 @@ function Table() {
             </button>
             <button
               style={{ color: "white" }}
-              className="btn bg-danger m-4"
+              className="btn bg-danger m-2"
               onClick={() => {
                 if (confirm("هل انت متأكد ؟")) {
                   localStorage.clear();
-                  window.location.reload();
+                  // window.location.reload();
                 }
               }}
             >
