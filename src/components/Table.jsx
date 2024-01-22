@@ -42,7 +42,7 @@ function Table() {
               onClick={() => {
                 if (confirm("هل انت متأكد ؟")) {
                   localStorage.clear();
-                  // window.location.reload();
+                  window.location.reload();
                 }
               }}
             >
