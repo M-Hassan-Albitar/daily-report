@@ -31,6 +31,13 @@ function ReportForm() {
     const item = [...saveList, report];
     setSaveList(item);
     setLocalStorage(item);
+    setReport({
+      id: "",
+      date: "",
+      customerNum: "",
+      rate: "",
+      val: "",
+    });
     // window.location.reload();
     // alert("OK");
   };
