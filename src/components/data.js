@@ -1,6 +1,6 @@
 export const positive = [
   { id: 1, value: "makeOrder", ar: "تم التفصيل" },
-  { id: 2, value: "getOrder", ar: "استلم التفصيل" },
+  { id: 2, value: "getOrder", ar: "استلم الثياب" },
   { id: 3, value: "getFix", ar: "استلم التصليح" },
   { id: 4, value: "buyCard", ar: "اشترى كارت" },
   { id: 5, value: "buyAccessor", ar: "اشترى مستلزمات" },
