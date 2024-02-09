@@ -5,7 +5,7 @@ function FormNav() {
     <div>
       <div className="container">
         <div className="row">
-          <nav className=" clo-6 text-center mt-5 ">
+          <nav className=" clo-6 text-center mt-3 ">
             <Link
               style={{ color: "white", padding: 14 }}
               to="/table"
