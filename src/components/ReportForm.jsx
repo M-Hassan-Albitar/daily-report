@@ -31,11 +31,9 @@ function ReportForm() {
     const item = [...saveList, report];
     setSaveList(item);
     setLocalStorage(item);
-    report.customerNum = ""
-    report.rate = ""
-    report.date = "";
-    // window.location.reload();
-    alert("تمت الاضافة بنجاح");
+    
+    window.location.reload();
+
   };
 
   return (
