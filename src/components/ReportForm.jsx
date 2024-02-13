@@ -12,6 +12,7 @@ function ReportForm() {
   const getLocalStorage = JSON.parse(localStorage.getItem("reportList")) || [];
   const [valList, setValList] = useState([]);
   const [saveList, setSaveList] = useState(getLocalStorage);
+  const [branchName, setBranchName] = useState("");
   const [report, setReport] = useState({
     id: "",
     date: "",
@@ -31,14 +32,16 @@ function ReportForm() {
     const item = [...saveList, report];
     setSaveList(item);
     setLocalStorage(item);
-    
+    localStorage.setItem("branch", branchName);
     window.location.reload();
-
   };
 
   return (
     <>
-      <FormNav />
+      <div className="container">
+        <FormNav />
+        <hr style={{ color: "black" }} />
+      </div>
       <div className="form">
         <div className="container">
           <h1>التقرير اليومي</h1>
@@ -47,7 +50,14 @@ function ReportForm() {
           <form>
             <div className="branch-name">
               <label htmlFor="branch"> اسم الفرع : </label>
-              <input style={{outline:"none"}} id="branch" type="text" />
+              <input
+                value={branchName}
+                onChange={(e) => {
+                  setBranchName(e.target.value);
+                }}
+                id="branch"
+                type="text"
+              />
             </div>
             <div className="date">
               <label htmlFor="day">التاريخ : </label>

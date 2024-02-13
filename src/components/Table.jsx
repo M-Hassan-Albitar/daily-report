@@ -50,8 +50,10 @@ function Table() {
             </button>
           </div>
         </div>
+        <hr style={{ color: "black" }} />
         <div className="row">
           <div className="col">
+            <h2>{localStorage.getItem("branch")}</h2>
             <table className="table table-bordered text-center">
               <thead>
                 <tr>
