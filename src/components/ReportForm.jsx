@@ -45,6 +45,10 @@ function ReportForm() {
           <hr />
 
           <form>
+            <div className="branch-name">
+              <label htmlFor="branch"> اسم الفرع : </label>
+              <input style={{outline:"none"}} id="branch" type="text" />
+            </div>
             <div className="date">
               <label htmlFor="day">التاريخ : </label>
               <input
