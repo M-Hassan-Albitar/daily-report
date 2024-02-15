@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Table() {
   let reportData = JSON.parse(localStorage.getItem("reportList")) || [];
   const [reportLocal] = useState(reportData);
+  const [branchName, setBranchName] = useState("");
+
+  useEffect(() => {
+    const getBranchName = localStorage.getItem("branch");
+    setBranchName(getBranchName);
+  }, []);
 
   const tableData = reportLocal.map((dt) => {
     return (
@@ -53,7 +59,7 @@ function Table() {
         <hr style={{ color: "black" }} />
         <div className="row">
           <div className="col">
-            <h2>{localStorage.getItem("branch")}</h2>
+            <h2>{branchName}</h2>
             <table className="table table-bordered text-center">
               <thead>
                 <tr>
