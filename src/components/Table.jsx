@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+const b = localStorage.getItem("branch") || "";
+
 function Table() {
   let reportData = JSON.parse(localStorage.getItem("reportList")) || [];
   const [reportLocal] = useState(reportData);
-  const [branchName, setBranchName] = useState("");
+  const [branchName, setBranchName] = useState(b);
 
   useEffect(() => {
     const getBranchName = localStorage.getItem("branch");
