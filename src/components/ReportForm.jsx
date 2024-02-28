@@ -22,7 +22,10 @@ function ReportForm() {
   });
 
   let isDisabled =
-    report.customerNum === "" || report.rate === "" || report.val === "" || branchName === "";
+    report.customerNum === "" ||
+    report.rate === "" ||
+    report.val === "" ||
+    branchName === "";
 
   const bg = isDisabled && "gray";
 
@@ -48,17 +51,6 @@ function ReportForm() {
           <hr />
 
           <form>
-            <div className="branch-name">
-              <label htmlFor="branch"> اسم الفرع : </label>
-              <input
-                value={branchName}
-                onChange={(e) => {
-                  setBranchName(e.target.value);
-                }}
-                id="branch"
-                type="text"
-              />
-            </div>
             <div className="date">
               <label htmlFor="day">التاريخ : </label>
               <input
@@ -70,6 +62,18 @@ function ReportForm() {
                 id="day"
               />
             </div>
+            <div className="branch-name">
+              <label htmlFor="branch"> اسم الفرع : </label>
+              <input
+                value={branchName}
+                onChange={(e) => {
+                  setBranchName(e.target.value);
+                }}
+                id="branch"
+                type="text"
+              />
+            </div>
+
             <div className="customers">
               <label htmlFor="num">عدد العملاء : </label>
               <input
