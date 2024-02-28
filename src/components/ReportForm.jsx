@@ -22,7 +22,7 @@ function ReportForm() {
   });
 
   let isDisabled =
-    report.customerNum === "" || report.rate === "" || report.val === "";
+    report.customerNum === "" || report.rate === "" || report.val === "" || branchName === "";
 
   const bg = isDisabled && "gray";
 
